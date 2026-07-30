@@ -1,6 +1,32 @@
-# python-crash-workshop
+# Taller intensivo de Python
 
-Introducción y Ejercicios para el Workshop de Python
+Material introductorio en español para practicar Python 3 con notebooks,
+ejercicios, módulos y pequeños conjuntos de datos.
 
-[https://www.amazon.com.mx/Learn-Python-Hard-Way-Introduction/dp/0134692888/ref=pd_sim_14_2/147-5690223-1819941?_encoding=UTF8&pd_rd_i=0134692888&pd_rd_r=f945dc7a-4d9d-11e9-a258-1dc4cbbc6958&pd_rd_w=2HxxW&pd_rd_wg=GatOU&pf_rd_p=4ef43de1-e4c3-4695-a0de-1ba870e32035&pf_rd_r=ATW50E45ZZ6CFA494EDB&psc=1&refRID=ATW50E45ZZ6CFA494EDB] (Learn Python3 The hard way)
+## Contenido
 
+- `intro-python.ipynb`: recorrido guiado por los fundamentos.
+- `intro-python(ejercicios).ipynb`: ejercicios para participantes.
+- `intro-python(ejercicios resueltos).ipynb`: soluciones de referencia.
+- `carpeta/` y `mi_modulo2.py`: ejemplo de importación entre módulos.
+- `data/`: archivos TSV utilizados por los ejercicios.
+
+Los notebooks conservan salidas históricas con fines didácticos. Revise cada
+celda antes de ejecutarla y use un entorno aislado; un notebook es código.
+
+## Preparación
+
+Requiere Python 3.12 o posterior.
+
+```bash
+python -m venv .venv
+python -m pip install -r requirements-dev.txt
+ruff check .
+pytest
+python tools/validate_notebooks.py
+```
+
+Las pruebas no ejecutan las celdas: validan la estructura de los notebooks y
+los ejemplos de módulos.
+
+Consulte [CONTRIBUTING.md](CONTRIBUTING.md) y [SECURITY.md](SECURITY.md).

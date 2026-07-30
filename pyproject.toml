@@ -1,0 +1,11 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=carpeta --cov=tools --cov-report=term-missing --cov-fail-under=90"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+exclude = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
